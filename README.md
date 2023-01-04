@@ -21,15 +21,16 @@ You can now enter a new default password for them. Make sure “user must change
 ![image](https://user-images.githubusercontent.com/121589466/210334297-5d0634cf-7419-494d-be25-1e44b55e6621.png)  
 
 4.	Disable accounts  
-When a user leaves the organization or has their machine compromised, you will need to disable their account. To do so, right click on their user profile and select Reset Password.
+When a user leaves the organization or has their machine compromised, you will need to disable their account. To do so, right click on their user profile and select Reset Password.  
+![image](https://user-images.githubusercontent.com/121589466/210486758-7582dbc0-0430-439f-bcdd-aeeaa6b8d873.png)  
 
 5.	Create and structure Organizational Units
 Having the structure of your Organizational Units setup properly will make a huge difference in how difficult it is to manage user permissions and configure group policy. It’s best to structure your Organizational Units to reflect the physical structure of the organization. You will also want your structure to be as simple and minimal as possible. Too many Organizational Units will make it difficult and confusing to manage.
 
-Let’s go through how to setup a typical Organizational Unit tree from scratch. First, you will right click on the domain and select new -> Organizational Unit. 
- 
+Let’s go through how to setup a typical Organizational Unit tree from scratch. First, you will right click on the domain and select new -> Organizational Unit.  
+![image](https://user-images.githubusercontent.com/121589466/210486792-d3e3013e-ac04-4e46-a47e-2d533bca6fb5.png)  
 This new O.U will be the parent container that represents the overall business organization. Its best to also add an underscore in front of the name (ex: _Production). This will make it appear at the top of the list of Organizational Units in the domain structure.  
- 
+![image](https://user-images.githubusercontent.com/121589466/210486825-3c1697be-1cda-4cf4-b35a-4a2db397a448.png)  
 Next, you will create Organizational Units that represent different physical locations of the business. Within those locations you can then create further sub-divisions for each floor or section of each location. 
  
 Within those physical divisions, you can then create Organizational Units that represent different departments on each floor. Within each department, you can then create a final Organizational Unit for the managers of those departments.
