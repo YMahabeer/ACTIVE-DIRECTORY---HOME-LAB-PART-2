@@ -26,51 +26,52 @@ When a user leaves the organization or has their machine compromised, you will n
 
 5.	Create and structure Organizational Units
 Having the structure of your Organizational Units setup properly will make a huge difference in how difficult it is to manage user permissions and configure group policy. It’s best to structure your Organizational Units to reflect the physical structure of the organization. You will also want your structure to be as simple and minimal as possible. Too many Organizational Units will make it difficult and confusing to manage.
-
+<br><br/>
 Let’s go through how to setup a typical Organizational Unit tree from scratch. First, you will right click on the domain and select new -> Organizational Unit.  
 ![image](https://user-images.githubusercontent.com/121589466/210486792-d3e3013e-ac04-4e46-a47e-2d533bca6fb5.png)  
 This new O.U will be the parent container that represents the overall business organization. Its best to also add an underscore in front of the name (ex: _Production). This will make it appear at the top of the list of Organizational Units in the domain structure.  
 ![image](https://user-images.githubusercontent.com/121589466/210486825-3c1697be-1cda-4cf4-b35a-4a2db397a448.png)  
-Next, you will create Organizational Units that represent different physical locations of the business. Within those locations you can then create further sub-divisions for each floor or section of each location. 
- 
+Next, you will create Organizational Units that represent different physical locations of the business. Within those locations you can then create further sub-divisions for each floor or section of each location.   
+![image](https://user-images.githubusercontent.com/121589466/210487037-f6633f04-ab26-4902-97ca-ddf31c3de6ee.png)  
 Within those physical divisions, you can then create Organizational Units that represent different departments on each floor. Within each department, you can then create a final Organizational Unit for the managers of those departments.
-If your organization is only in one location or just has one floor, you can skip those layers and only add the subdivisions that make sense for your organization. 
- 
-You can now drag the users into the appropriate Organizational Units to finalize the structure of your organization. You can also right click on a user and select Move. 
-  
-Now you can select which O.U to move that user into.
- 
+If your organization is only in one location or just has one floor, you can skip those layers and only add the subdivisions that make sense for your organization.  
+![image](https://user-images.githubusercontent.com/121589466/210487134-c5ba864a-844a-4d1a-ab88-0f8cdb4eb332.png)  
+You can now drag the users into the appropriate Organizational Units to finalize the structure of your organization. You can also right click on a user and select Move.  
+![image](https://user-images.githubusercontent.com/121589466/210487160-351f1c35-83d1-4974-a84c-010ea17595c2.png)  
+Now you can select which O.U to move that user into.  
+![image](https://user-images.githubusercontent.com/121589466/210487182-051e848a-0e3f-43ed-a9fe-c95cc9d94810.png)  
 
 6.	Configure and update group policy
 Now that you have setup the structure of your Organizational Units and added the right users to them, you can now configure group polices.
 
 a.	Custom wallpaper 
-The classic group policy example is to enforce a custom wallpaper for an entire department. You will do this for the I.T department. To do this, go to the Group Policy Management tool.
- 
-Right click on the Organizational Unit that you want to add a policy to. Then select “Create a GPO in this domain, and Link it here…”.
- 
-Give it a name that will make it easy to understand what this policy is doing. 
- 
-The new Group Policy Object (GPO) will appear under the Organizational Unit it is created for. To customize the GPO, right click the GPO and select Edit. 
- 
-This will bring up the Group Policy Management Editor. Navigate to the policy that you want to make changes to. To change the wallpaper, navigate through the folders on the left and go to User Configuration -> Administrative Templates -> Desktop -> Desktop. Then on the right. Double click on Desktop Wallpaper.
- 
-You can now select the Enabled radio button on the upper left. This will now allow you to enter the path to the image that you want to use for the wallpaper. Also change the wallpaper style to Fill. Then hit apply. The next time a user in the I.T Organizational Unit logs in, they will see the new wallpaper.
- 
+The classic group policy example is to enforce a custom wallpaper for an entire department. You will do this for the I.T department. To do this, go to the Group Policy Management tool.  
+![image](https://user-images.githubusercontent.com/121589466/210487215-6f933617-4b41-4ff4-b20b-c806ef254dde.png)  
+Right click on the Organizational Unit that you want to add a policy to. Then select “Create a GPO in this domain, and Link it here…”.  
+![image](https://user-images.githubusercontent.com/121589466/210487226-206e6b65-a9bb-4451-8c51-0a6e49c8eb9a.png)  
+Give it a name that will make it easy to understand what this policy is doing.  
+![image](https://user-images.githubusercontent.com/121589466/210487238-5e307ff5-d0b2-4f3c-bd8e-20408d05cbe1.png)  
+The new Group Policy Object (GPO) will appear under the Organizational Unit it is created for. To customize the GPO, right click the GPO and select Edit.  
+![image](https://user-images.githubusercontent.com/121589466/210487251-6efde6e2-dbe0-4317-a36c-722de553a399.png)  
+This will bring up the Group Policy Management Editor. Navigate to the policy that you want to make changes to. To change the wallpaper, navigate through the folders on the left and go to User Configuration -> Administrative Templates -> Desktop -> Desktop. Then on the right. Double click on Desktop Wallpaper.  
+![image](https://user-images.githubusercontent.com/121589466/210487270-bf39ee9a-a4ea-466d-8164-5149a61ac33c.png)  
+You can now select the Enabled radio button on the upper left. This will now allow you to enter the path to the image that you want to use for the wallpaper. Also change the wallpaper style to Fill. Then hit apply. The next time a user in the I.T Organizational Unit logs in, they will see the new wallpaper.  
+![image](https://user-images.githubusercontent.com/121589466/210487294-82113190-7d4e-476e-929d-c3b7ba58e9e2.png)  
 For this lab, you can use one of Microsoft’s built-in wallpapers. They are located here: C:\Windows\Web\Wallpaper.
 
 Its best to place the wallpaper image in a shared folder. This will allow any computer on the network to reference the image file.
 
-To create a shared folder; right click in the desired location and select New -> Folder.
- 
-Name that folder IT Wallpaper. Then right click on it and select Properties.
- 
-Click on the Sharing tab then click on the Advanced Sharing button.
- 
-Check the Share this folder box. Give the share a name. Then click on the Permissions button.
- 
-Make sure that the only permission for everyone is Read. Then click ok. Then hit Apply.
- 
+To create a shared folder; right click in the desired location and select New -> Folder.  
+![image](https://user-images.githubusercontent.com/121589466/210487350-93d28384-cfd0-4daf-8615-89252e2db676.png)  
+Name that folder IT Wallpaper. Then right click on it and select Properties.  
+![image](https://user-images.githubusercontent.com/121589466/210487367-e136be40-1e80-4980-b57c-147c2f415117.png)  
+Click on the Sharing tab then click on the Advanced Sharing button.  
+![image](https://user-images.githubusercontent.com/121589466/210487375-b3d428c6-1ea1-4bc9-aa59-429def3e66ea.png)  
+Check the Share this folder box. Give the share a name. Then click on the Permissions button.  
+![image](https://user-images.githubusercontent.com/121589466/210487410-adb0902b-26cd-4df0-bc16-6f0f460b8acf.png)  
+
+Make sure that the only permission for everyone is Read. Then click ok. Then hit Apply.  
+![image](https://user-images.githubusercontent.com/121589466/210487634-9f47dd9c-a9c7-44e3-b7fb-3214adc24bb3.png)  
 You will now go back to the sharing tab for the folder. You can now copy the network path and paste it into the GPO path. 
  
 You will also need to append the wallpapers image name to the shared folder path.
