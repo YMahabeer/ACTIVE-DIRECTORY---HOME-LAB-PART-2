@@ -1,4 +1,6 @@
-# Common Active Directory Tasks to Learn  
+# Active Directory Home Lab [Part 2]
+
+## Common Active Directory Tasks to Learn  
 Let’s do a few common tasks that are performed using Active Directory.  
 1.	Finding users  
 You will need to find a user in Active Directory before you can make any changes to their account. You can search manually for a user by going through the Organizational Units and finding where their account is located. A better way is to use the “Find” feature which allows you to search using keywords.
