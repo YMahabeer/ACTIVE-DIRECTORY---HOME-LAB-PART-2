@@ -1,4 +1,5 @@
 # Active Directory Home Lab [Part 2]
+![image](https://jumpcloud.com/wp-content/uploads/2016/07/AD1.png)  
 
 ## Common Active Directory Tasks to Learn  
 Let’s do a few common tasks that are performed using Active Directory.  
